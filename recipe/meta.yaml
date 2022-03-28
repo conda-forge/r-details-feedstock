@@ -16,7 +16,6 @@ build:
   merge_build_host: true  # [win]
   number: 0
   noarch: generic
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,22 +23,23 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-clipr
     - r-desc
+    - r-htmltools
     - r-httr
     - r-knitr
     - r-magrittr
     - r-png
     - r-withr
     - r-xml2
-
   run:
     - r-base
     - r-clipr
     - r-desc
+    - r-htmltools
     - r-httr
     - r-knitr
     - r-magrittr
@@ -54,10 +54,8 @@ test:
 
 about:
   home: https://github.com/yonicd/details
-
   license: MIT
   summary: Create a details HTML tag around R objects to place in a Markdown, 'Rmarkdown' and 'roxygen2' documentation.
-
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
