@@ -1,11 +1,11 @@
-About r-details
-===============
+About r-details-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-details-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/yonicd/details
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-details-feedstock/blob/main/LICENSE.txt)
 
 Summary: Create a details HTML tag around R objects to place in a Markdown, 'Rmarkdown' and 'roxygen2' documentation.
 
